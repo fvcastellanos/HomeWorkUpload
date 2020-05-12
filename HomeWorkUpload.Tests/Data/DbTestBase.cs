@@ -18,7 +18,7 @@ namespace HomeWorkUpload.Tests.Data
 
             DbContext = new ApplicationContext(_contextOptions);
 
-            // Seed();
+            Seed();
         }
 
         protected void StartTransaction()
@@ -35,7 +35,6 @@ namespace HomeWorkUpload.Tests.Data
         {
             using (var context = new ApplicationContext(_contextOptions))
             {
-                context.Database.EnsureDeleted();
                 context.Database.EnsureCreated();
             }
         }
