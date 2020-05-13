@@ -5,15 +5,20 @@ namespace HomeWorkUpload.Tests.Fixtures
 {
     public static class DataFixture
     {
-        public static Assigment BuildAssigment()
+        public static Assigment BuildAssigment(string name)
         {
             return new Assigment()
             {
-                Name = "Test Assigment",
+                Name = name,
                 Description = "Test Assigment",
                 Email = "email@mail.com",
                 CopyEmail = "copyEmail@mail.com"
             };
+        }
+
+        public static Assigment BuildAssigment()
+        {
+            return BuildAssigment("Test Assigment");
         }
 
         public static HomeWork BuildHomeWork()
