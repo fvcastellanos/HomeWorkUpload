@@ -4,10 +4,14 @@ namespace HomeWorkUpload.Data
 {
     public class ApplicationContext : DbContext
     {
-        public DbSet<Assigment> Assigments { get; set; }
-        public DbSet<HomeWork> HomeWorks { get; set; }
-        public DbSet<HomeWorkDetail> HomeWorkDetails { get; set; }
-        
+        public virtual DbSet<Assigment> Assigments { get; set; }
+        public virtual DbSet<HomeWork> HomeWorks { get; set; }
+        public virtual DbSet<HomeWorkDetail> HomeWorkDetails { get; set; }
+
+        public ApplicationContext()
+        {
+        }
+
         public ApplicationContext(DbContextOptions<ApplicationContext> dbContext) : base(dbContext)
         {
             // db context initialize
